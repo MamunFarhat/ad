@@ -1,0 +1,215 @@
+*  {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+
+.container .card {
+    position: relative;
+    width: 420px;
+    height: 550px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: gold;
+    clip-path: circle(160px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover::before {
+    clip-path: circle(419px at 80% -20%);
+}
+
+.container .card::after {
+    content: "Samsung";
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    font-size: 6.40em;
+    font-weight: 800;
+    font-style: italic;
+    color: #ffffff0a;
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 250px;
+}
+
+.container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+}
+
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.container .card:hover .contentBx {
+    height: 220px;
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.container .card .contentBx .storage,
+.container .card .contentBx .ram,
+.container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentBx .storage {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.container .card:hover .contentBx .ram {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.container .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .7s;
+}
+
+.container .card .contentBx .storage h3,
+.container .card .contentBx .ram h3,
+.container .card .contentBx .color h3 {
+    color: white;
+    font-stretch: semi-expanded;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container .card .contentBx .storage span {
+    width: 45px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #a4ff79;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .ram span {
+    width: 45px;
+    height: 26px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 26px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #f1d474;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2) {
+    background: #3b494d;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+    background: #bdc279;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+    background: #bbdeec;
+}
+
+.container .card .contentBx button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: silver;
+    border-radius: 4px;
+    margin-top: 10%;
+    text-decoration: underline;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+    box-shadow: #3b494d;
+}
+
+.container .card .contentBx button {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition-delay: .7s;
+}
+
+.container .card .contentBx .storage label input {
+    color: #a53737;
+    margin-right: 3px;
+}
